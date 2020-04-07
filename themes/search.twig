@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ config.theme_config.language }}">
+<head>
+    {% include 'partials/head.html.twig' %}
+</head>
+<body data-url="{{ current_page.url }}" class="{{ meta.template }}">
+{% block nav %}
+    {% include 'partials/nav.html.twig' %}
+{% endblock %}
+{% set template = meta.template %}
+<section id="body" class="{{meta.template}}">
+    <div class="padding highlightable">
+      {# Search #}
+      {% if search_terms %}
+        <div class="SearchResults">
+            {% set search_results = pages|apply_search %}
+            {% if search_results %}
+                <h2>Search results for {{ search_terms|e('html') }}</h2><br>
+                {% for page in search_results %}
+                    <div class="SearchResult">
+                        <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+                        {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No results found for {{ search_terms|e('html') }}.</p>
+            {% endif %}
+        </div>
+      {% endif %}
+      {# Search #}
+  </div>
+</body>

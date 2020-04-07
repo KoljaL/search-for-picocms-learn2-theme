@@ -2,7 +2,7 @@
 add search function to the template  
 
 these search: https://github.com/PontusHorn/Pico-Search  
-to these Template: https://github.com/getgrav/grav-theme-learn2  
+to these Template: https://github.com/dcrobertson01/picocms-theme-learn2   
 
 just copy carefully in your picocms folder
 

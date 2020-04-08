@@ -8,5 +8,5 @@ to these Template: https://github.com/dcrobertson01/picocms-theme-learn2
 
 just copy the files carefully in your picocms folder
 
-**!!** will overwrite **nav.thml.twig** and **custom.css** !!  
+**!!** will overwrite **nav.html.twig** and **custom.css** !!  
 therefore you will get some extra styles
